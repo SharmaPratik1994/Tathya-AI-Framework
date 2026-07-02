@@ -1,148 +1,187 @@
 # 01_Foundation.md
 
-# Tathya AI Architecture Framework (TAAF)
+# Tathya Intelligence Framework (TIF)
 
-## Vision
-
-The purpose of this framework is to create a reusable architecture and development methodology for building AI-powered business applications.
-
-Instead of creating isolated AI demos, this framework focuses on designing production-ready AI systems that solve real business problems.
-
-Every future project—whether it is Finance, Manufacturing, Healthcare, HR, Supply Chain, Retail, or Customer Support—should follow the principles defined in this framework.
+**Version:** 1.0
 
 ---
 
-# Philosophy
+# Vision
 
-Artificial Intelligence is **not the product**.
+The **Tathya Intelligence Framework (TIF)** is a personal AI engineering framework for designing, building, evaluating, and continuously improving intelligent systems.
 
-Artificial Intelligence is a capability that enhances an existing business workflow.
+The framework focuses on the **Intelligence Layer** of AI applications—the part responsible for understanding user intent, reasoning over information, selecting the appropriate tools, generating insights, and assisting users in solving real business problems.
 
-A successful AI application is a combination of:
-
-* Software Engineering
-* Business Understanding
-* Data Engineering
-* AI Engineering
-* System Design
-
-The objective is always to improve an existing workflow rather than replacing everything with AI.
+TIF is designed to evolve through real-world projects, experimentation, and continuous learning.
 
 ---
 
-# The AI Engineering Mindset
+# Why TIF?
 
-Before writing a single line of code, answer these questions.
+Modern AI applications are much more than chat interfaces.
+
+A complete AI application consists of several layers:
+
+* User Interface
+* Backend Services
+* Data Layer
+* Infrastructure
+* **Intelligence Layer**
+
+While frontend, backend, and infrastructure are essential, the Intelligence Layer is what differentiates an AI application from traditional software.
+
+The primary goal of TIF is to master the design and engineering of this Intelligence Layer.
+
+---
+
+# Core Philosophy
+
+Artificial Intelligence should not exist for its own sake.
+
+AI should solve real business problems.
+
+Every AI system should:
+
+* Understand the user's objective.
+* Reason using available information.
+* Retrieve the right context.
+* Select the correct tools.
+* Generate actionable insights.
+* Explain decisions clearly.
+* Produce measurable business value.
+
+The Intelligence Layer should enhance existing workflows rather than replace them.
+
+---
+
+# Purpose of the Framework
+
+The objectives of TIF are to:
+
+* Build reusable AI engineering knowledge.
+* Develop systematic approaches for solving business problems using AI.
+* Document architecture patterns for intelligent systems.
+* Capture lessons learned from real projects.
+* Create reusable design patterns for future AI applications.
+* Build a long-term AI engineering playbook.
+
+---
+
+# AI Engineering Mindset
+
+Before writing code, every AI engineer should answer the following questions.
 
 ## 1. What business problem am I solving?
 
-The problem should be measurable.
+Technology should always follow the business problem.
 
-Example:
+Clearly define:
 
-* Manual invoice reconciliation
-* Production downtime analysis
-* Inventory forecasting
-* Customer support automation
-
----
-
-## 2. Who is the user?
-
-Identify the primary user.
-
-Examples:
-
-* Business Owner
-* Accountant
-* Production Manager
-* HR Manager
-* Sales Team
-* Customer Support Agent
-
----
-
-## 3. How is the problem solved today?
-
-Document the existing workflow.
-
-Understand:
-
-* Manual work
-* Existing software
-* Excel usage
-* Human decisions
+* Existing workflow
 * Pain points
+* Expected business value
 
 ---
 
-## 4. Why is AI required?
-
-Never use AI because it is fashionable.
-
-Use AI only when it provides one or more of the following:
-
-* Faster decision making
-* Reduced manual effort
-* Better search
-* Natural language interaction
-* Intelligent recommendations
-* Automation
-
----
-
-## 5. What business value will be created?
+## 2. What decision should the AI help make?
 
 Examples:
 
-* Reduce processing time
-* Improve accuracy
-* Save employee hours
-* Reduce operational cost
-* Increase productivity
-* Improve customer experience
+Finance
 
-Business value should always be measurable.
+* Identify overdue customers.
+* Summarize collections.
+* Recommend follow-up priorities.
+
+Manufacturing
+
+* Identify production bottlenecks.
+* Analyze downtime.
+* Recommend corrective actions.
+
+The focus should be on decision support rather than simply answering questions.
 
 ---
 
-# Universal AI Application Lifecycle
+## 3. What information does the AI require?
 
-Every project should follow the same lifecycle.
+Possible sources include:
+
+* SQL Databases
+* Documents
+* APIs
+* Knowledge Bases
+* External Systems
+* Previous Conversations
+
+The AI should retrieve information rather than rely on assumptions.
+
+---
+
+## 4. How should the AI reason?
+
+Every request should have a reasoning strategy.
+
+Examples:
+
+* Single-step reasoning
+* Multi-step reasoning
+* Tool-based reasoning
+* Agent-based reasoning
+* Workflow orchestration
+
+Reasoning should be explicitly designed rather than left to chance.
+
+---
+
+## 5. How will success be measured?
+
+Examples:
+
+* Correctness
+* Accuracy
+* Latency
+* Cost
+* User satisfaction
+* Business impact
+
+Every AI system should define measurable evaluation criteria.
+
+---
+
+# The Intelligence Development Lifecycle
+
+Every AI project should follow this sequence.
 
 Business Problem
 
 ↓
 
-User Research
+Business Workflow
 
 ↓
 
-Workflow Mapping
+Intelligence Design
 
 ↓
 
-System Architecture
+Reasoning Strategy
 
 ↓
 
-Database Design
+Tool Design
 
 ↓
 
-Backend APIs
+Prompt Strategy
 
 ↓
 
-Frontend
+Implementation
 
 ↓
 
-AI Integration
-
-↓
-
-Testing
+Evaluation
 
 ↓
 
@@ -152,280 +191,163 @@ Deployment
 
 Continuous Improvement
 
-AI should never be the first step.
+---
+
+# The Intelligence Layer
+
+Every intelligent system can be viewed as a sequence of reasoning steps.
+
+User Request
+
+↓
+
+Intent Understanding
+
+↓
+
+Task Planning
+
+↓
+
+Context Retrieval
+
+↓
+
+Reasoning
+
+↓
+
+Tool Selection
+
+↓
+
+Tool Execution
+
+↓
+
+Business Insight Generation
+
+↓
+
+Response Generation
+
+↓
+
+Evaluation
+
+Each layer has a clear responsibility and should remain modular.
 
 ---
 
-# Universal AI Application Architecture
+# Core Components of an Intelligent System
 
-Every application consists of multiple layers.
+Every AI application should clearly define the following components.
 
-Presentation Layer
+### Business Layer
 
-↓
-
-Application Layer
-
-↓
-
-Business Logic Layer
-
-↓
-
-Data Layer
-
-↓
-
-AI Layer
-
-↓
-
-External Systems
-
-Each layer should remain independent so that future improvements are easier.
+Defines the business domain, workflows, and objectives.
 
 ---
 
-# Five Core Layers
+### Intelligence Layer
 
-## Layer 1 — Presentation
-
-Purpose
-
-Provide the user interface.
-
-Examples
-
-* React
-* Next.js
-* Streamlit
-* Mobile Applications
-
-Responsibilities
-
-* Dashboard
-* Reports
-* Uploads
-* AI Chat
-* Authentication UI
+Responsible for reasoning and decision making.
 
 ---
 
-## Layer 2 — Application
+### Context Layer
 
-Purpose
+Provides the information required by the AI.
 
-Connect users with business logic.
+Possible sources:
 
-Examples
-
-* FastAPI
-* Flask
-
-Responsibilities
-
-* Authentication
+* Structured databases
+* Documents
 * APIs
-* Validation
-* Routing
-* Error Handling
+* External services
 
 ---
 
-## Layer 3 — Business Logic
+### Tool Layer
 
-Purpose
+Enables interaction with external systems.
 
-Solve the actual business problem.
+Examples:
 
-Examples
-
-Finance
-
-* Invoice Reconciliation
-* Accounts Receivable
-
-Manufacturing
-
-* OEE
-* Downtime Analysis
-* Production Planning
-
-Inventory
-
-* Stock Forecasting
-* Purchase Recommendations
-
-Business Logic is the heart of every application.
+* SQL
+* REST APIs
+* Search
+* Email
+* Messaging platforms
+* Enterprise software
 
 ---
 
-## Layer 4 — Data
+### Communication Layer
 
-Purpose
-
-Store structured business data.
-
-Examples
-
-* PostgreSQL
-* MySQL
-* SQL Server
-
-Responsibilities
-
-* Data Integrity
-* Relationships
-* Transactions
-* Query Performance
+Converts reasoning into clear, actionable responses.
 
 ---
 
-## Layer 5 — AI
+### Evaluation Layer
 
-Purpose
+Measures the quality, reliability, and usefulness of the AI system.
 
-Provide intelligent capabilities.
+---
 
-Examples
+# Guiding Principles
 
+1. Business problems come before AI technologies.
+2. Design intelligence before implementation.
+3. Prefer reasoning over hard-coded responses.
+4. Retrieve information instead of guessing.
+5. Use the simplest architecture that satisfies the business need.
+6. Separate reasoning, tools, and data into modular components.
+7. Continuously evaluate AI quality.
+8. Build reusable intelligence patterns.
+9. Learn through practical projects.
+10. Continuously improve the framework through experience.
+
+---
+
+# Scope of TIF
+
+The framework will evolve to cover the complete lifecycle of AI engineering, including:
+
+* AI System Design
+* Prompt Engineering
+* Context Engineering
 * Tool Calling
+* Structured Data Reasoning
 * Retrieval-Augmented Generation (RAG)
 * AI Agents
-* Prompt Engineering
+* Multi-Agent Systems
 * Model Selection
-
-AI should consume data from the Business Logic and Data Layers instead of bypassing them.
-
----
-
-# AI Decision Framework
-
-Use the correct AI technique based on the problem.
-
-Structured business data
-
-↓
-
-SQL + Tool Calling
+* Fine-Tuning
+* Model Inference
+* Model Serving
+* Evaluation
+* LLMOps
+* AI Security
+* Deployment Patterns
+* Enterprise AI Architecture
 
 ---
 
-Documents
+# Long-Term Vision
 
-↓
+The long-term objective of TIF is to become a reusable methodology for designing intelligent systems across different industries.
 
-RAG
+Rather than documenting isolated technologies, the framework aims to capture how intelligent systems are designed, implemented, evaluated, and continuously improved.
 
----
-
-Need to perform actions
-
-↓
-
-Tool Calling
+Every project built in the future should contribute new knowledge back into TIF, allowing the framework to evolve through practical experience.
 
 ---
 
-Need multi-step reasoning
+# Guiding Statement
 
-↓
-
-AI Agent
-
----
-
-Need external software interaction
-
-↓
-
-API or MCP
-
-Choose the simplest solution that satisfies the requirement.
-
----
-
-# Core Engineering Principles
-
-1. Solve business problems before choosing AI technologies.
-2. Design architecture before writing code.
-3. Keep the system modular.
-4. Separate business logic from AI logic.
-5. Use structured databases for structured information.
-6. Use RAG only for document retrieval.
-7. Validate ideas with real users.
-8. Build an MVP before optimization.
-9. Prefer maintainable solutions over complex ones.
-10. Understand every important technical decision in the system.
-
----
-
-# Standard Development Workflow
-
-Step 1
-
-Understand the business.
-
-↓
-
-Step 2
-
-Map the workflow.
-
-↓
-
-Step 3
-
-Design the architecture.
-
-↓
-
-Step 4
-
-Design the database.
-
-↓
-
-Step 5
-
-Build the backend.
-
-↓
-
-Step 6
-
-Build the frontend.
-
-↓
-
-Step 7
-
-Integrate AI.
-
-↓
-
-Step 8
-
-Test with users.
-
-↓
-
-Step 9
-
-Deploy.
-
-↓
-
-Step 10
-
-Iterate based on feedback.
-
----
-
-# Long-Term Goal
-
-The objective of the Tathya AI Architecture Framework is not to build isolated projects.
-
-The objective is to build reusable, scalable, and maintainable AI systems that solve real business problems and demonstrate strong software engineering, data engineering, and AI engineering practices.
-
-Every new project should reuse this framework, modifying only the domain-specific business logic while preserving the overall architecture and engineering principles.
+> **Build intelligence, not just interfaces.**
+>
+> **Design reasoning, not just prompts.**
+>
+> **Solve business problems, not just technical challenges.**

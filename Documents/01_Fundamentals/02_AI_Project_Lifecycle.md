@@ -1,38 +1,82 @@
-# 02_Project_Lifecycle.md
+# 02_AI_Project_Lifecycle.md
 
 # AI Project Development Lifecycle
 
-## Purpose
+**Framework:** Tathya Intelligence Framework (TIF)
 
-This document defines the standard development lifecycle for all AI projects built using the **Tathya AI Architecture Framework (TAAF)**.
+Version: 1.0
 
-The objective is to ensure every project follows a structured, repeatable process—from idea validation to deployment—rather than jumping directly into coding.
+---
 
-Every future AI project should follow this lifecycle.
+# Purpose
+
+This document defines the standard lifecycle for developing AI-powered systems using the Tathya Intelligence Framework (TIF).
+
+Unlike traditional software development, TIF prioritizes designing the **Intelligence Layer** before implementation.
+
+The objective is to ensure every AI project follows a structured, repeatable process that focuses on solving business problems through intelligent reasoning.
 
 ---
 
 # Development Philosophy
 
-**Think before you build.**
+Do not start with code.
 
-A successful AI application is created through proper planning, architecture, and engineering—not by writing code first.
+Do not start with prompts.
 
-The sequence should always be:
+Do not start with models.
+
+Start with the business problem.
+
+Every AI project should answer:
+
+* What business problem exists?
+* Why does it exist?
+* Where should intelligence be introduced?
+* How should the AI reason?
+* How should success be measured?
+
+---
+
+# Standard AI Development Lifecycle
 
 Business Problem
 
 ↓
 
-Planning
+Business Workflow Analysis
 
 ↓
 
-Architecture
+Intelligence Design
 
 ↓
 
-Development
+Reasoning Design
+
+↓
+
+Context Design
+
+↓
+
+Tool Design
+
+↓
+
+Prompt Strategy
+
+↓
+
+Evaluation Design
+
+↓
+
+Prototype
+
+↓
+
+Integration
 
 ↓
 
@@ -42,238 +86,356 @@ Testing
 
 Deployment
 
+↓
+
+Continuous Learning
+
 ---
 
-# Standard Project Lifecycle
+# Phase 1 — Business Problem Analysis
 
-## Phase 1 — Problem Discovery
+## Objective
 
-### Objective
+Understand the business before introducing AI.
 
-Understand the real business problem.
+### Activities
+
+* Understand current workflow
+* Identify manual decisions
+* Identify repetitive tasks
+* Identify bottlenecks
+* Define measurable business outcomes
 
 ### Deliverables
 
-* Business problem statement
-* Target users
-* Existing workflow
-* Current pain points
-* Success criteria
+* Problem Statement
+* Business Workflow
+* Pain Points
+* Success Metrics
 
 ### Exit Criteria
 
-✅ Problem is validated.
-
-✅ Business value is clear.
+✅ Business problem clearly defined.
 
 ---
 
-## Phase 2 — Business Requirements (BRD)
+# Phase 2 — Intelligence Opportunity Analysis
 
-### Objective
+## Objective
 
-Define exactly what the application should do.
+Identify where AI adds value.
+
+Not every problem needs AI.
+
+Ask:
+
+* Can rules solve this?
+* Does reasoning add value?
+* Does natural language help?
+* Is prediction required?
+* Does automation create measurable benefit?
 
 ### Deliverables
 
-* Functional Requirements
-* Non-Functional Requirements
-* User Stories
-* MVP Scope
-* Out of Scope Features
+* Intelligence Opportunity Map
+* AI Scope
+* Non-AI Scope
 
 ### Exit Criteria
 
-✅ Everyone understands the product before development starts.
+✅ AI use case validated.
 
 ---
 
-## Phase 3 — System Design
+# Phase 3 — Intelligence Design
 
-### Objective
+## Objective
 
-Design the complete software architecture.
+Design how the AI should think.
+
+### Activities
+
+* Intent identification
+* Task decomposition
+* Planning strategy
+* Decision flow
+* Business logic mapping
 
 ### Deliverables
 
-* High-Level Architecture
-* Module Design
-* Component Diagram
-* Data Flow
+* Intelligence Workflow
+* Decision Tree
+* Reasoning Flow
 
 ### Exit Criteria
 
-✅ Architecture is finalized.
+✅ AI reasoning process finalized.
 
 ---
 
-## Phase 4 — Database Design
+# Phase 4 — Context Engineering
 
-### Objective
+## Objective
 
-Design the data model.
+Determine what information the AI requires.
+
+Possible sources include:
+
+* SQL databases
+* PDFs
+* APIs
+* Knowledge Bases
+* Previous Conversations
+* External Systems
+
+The AI should retrieve context instead of relying on memory or assumptions.
 
 ### Deliverables
 
-* ER Diagram
-* Tables
-* Relationships
-* Primary Keys
-* Foreign Keys
-* Indexes
+* Context Sources
+* Retrieval Strategy
+* Context Flow Diagram
 
 ### Exit Criteria
 
-✅ Database schema approved.
+✅ Context strategy approved.
 
 ---
 
-## Phase 5 — API Design
+# Phase 5 — Tool Architecture
 
-### Objective
+## Objective
 
-Define communication between frontend and backend.
-
-### Deliverables
+Design every tool the AI can use.
 
 Examples:
 
-* POST /login
-* POST /upload
-* GET /dashboard
-* POST /chat
+* SQL Tool
+* Search Tool
+* Email Tool
+* WhatsApp Tool
+* Calculator
+* External APIs
 
-Each endpoint should include:
+For each tool define:
 
-* Request
-* Response
-* Validation
+* Purpose
+* Input
+* Output
 * Error Handling
+* Security
 
 ### Exit Criteria
 
-✅ API contract finalized.
+✅ Tool architecture finalized.
 
 ---
 
-## Phase 6 — UI / UX Design
+# Phase 6 — Prompt & Reasoning Strategy
 
-### Objective
+## Objective
 
-Design the user interface before implementation.
+Define how the AI behaves.
 
-### Deliverables
+Design:
 
-* Dashboard Layout
-* Navigation
-* Forms
-* Reports
-* AI Chat Screen
+* System Prompt
+* Prompt Templates
+* Output Format
+* Response Style
+* Constraints
+* Guardrails
+
+Prompt engineering should support the reasoning process, not replace it.
 
 ### Exit Criteria
 
-✅ User flow is finalized.
+✅ Prompt strategy documented.
 
 ---
 
-## Phase 7 — Project Setup
+# Phase 7 — Evaluation Design
 
-### Objective
+## Objective
 
-Create the project structure.
+Define how AI quality will be measured.
 
-Typical setup includes:
+Possible evaluation metrics:
 
-* Git Repository
-* VS Code Workspace
-* Backend Folder
-* Frontend Folder
-* Documentation
-* Sample Data
-* Environment Configuration (when development begins)
+* Accuracy
+* Correctness
+* Hallucination Rate
+* Tool Selection Accuracy
+* Response Quality
+* Business Value
+* Latency
+* Cost
+
+Evaluation should be designed before implementation.
 
 ### Exit Criteria
 
-✅ Development environment is ready.
+✅ Evaluation framework approved.
 
 ---
 
-## Phase 8 — Development
+# Phase 8 — Prototype
 
-Development should be completed module by module.
+## Objective
 
-Recommended order:
+Build the intelligence layer.
 
-1. Authentication
-2. Database
-3. Backend APIs
-4. ETL Pipeline
-5. Dashboard
-6. Analytics
-7. AI Integration
-8. UI Improvements
+Focus on:
 
-Never build everything at once.
+* Prompt Engineering
+* Tool Calling
+* RAG
+* Agents
+* Reasoning
 
----
+The objective is to validate intelligence before investing in UI and infrastructure.
 
-## Phase 9 — Testing
+### Exit Criteria
 
-Testing includes:
-
-* Unit Testing
-* API Testing
-* Integration Testing
-* User Acceptance Testing
-
-Verify:
-
-* Business Logic
-* AI Responses
-* Database Operations
-* Error Handling
+✅ Intelligence validated.
 
 ---
 
-## Phase 10 — Deployment
+# Phase 9 — System Integration
 
-Typical deployment tasks:
+## Objective
 
-* Configure Environment Variables
-* Build Frontend
-* Deploy Backend
-* Configure Database
-* Verify Production Environment
+Connect the intelligence layer with the application.
 
----
+Possible integrations:
 
-## Phase 11 — Documentation & Iteration
+* Frontend
+* Backend APIs
+* Database
+* Authentication
+* External Systems
 
-Every completed project should include:
+The intelligence layer remains independent and reusable.
 
-* Updated README
-* Architecture Diagram
-* Screenshots
-* Lessons Learned
-* Future Improvements
+### Exit Criteria
 
-The learnings from each project should also be added back into the **Tathya AI Architecture Framework (TAAF)**.
+✅ End-to-end workflow functional.
 
 ---
 
-# Standard Project Folder Structure
+# Phase 10 — Testing
 
-Every new AI project should begin with the following structure.
+Testing should include:
+
+## Functional Testing
+
+Does the application work?
+
+---
+
+## Intelligence Testing
+
+Does the AI reason correctly?
+
+---
+
+## Tool Testing
+
+Are the correct tools selected?
+
+---
+
+## Business Validation
+
+Does the AI solve the original business problem?
+
+---
+
+### Exit Criteria
+
+✅ System validated.
+
+---
+
+# Phase 11 — Deployment
+
+Deployment includes:
+
+* Model deployment
+* API deployment
+* Tool configuration
+* Security
+* Monitoring
+* Logging
+
+Deployment should preserve the modular architecture defined during design.
+
+---
+
+# Phase 12 — Continuous Improvement
+
+Every deployed AI system should improve over time.
+
+Activities include:
+
+* Collect user feedback
+* Improve prompts
+* Improve reasoning
+* Improve tools
+* Reduce latency
+* Reduce hallucinations
+* Expand capabilities
+
+Every lesson learned should be documented back into TIF.
+
+---
+
+# Standard AI Project Documents
+
+Every AI project should include the following documents before development begins.
+
+## Business Documents
+
+* Business Requirements Document (BRD)
+* User Journey
+* Business Workflow
+
+---
+
+## Intelligence Documents
+
+* Intelligence Design
+* Prompt Strategy
+* Tool Definitions
+* Context Strategy
+* Evaluation Plan
+
+---
+
+## Engineering Documents
+
+* Architecture
+* Database Design
+* API Design
+* Roadmap
+
+---
+
+# Standard AI Project Folder Structure
 
 ```text
-Project-Name/
+Project/
 
 README.md
-.gitignore
 
 docs/
 │
 ├── BRD.md
+├── Intelligence.md
+├── Prompt_Strategy.md
+├── Tool_Definitions.md
+├── Context_Design.md
+├── Evaluation.md
 ├── Architecture.md
 ├── Database.md
 ├── API.md
@@ -282,56 +444,6 @@ docs/
 frontend/
 
 backend/
-
-database/
-
-sample_data/
-
-assets/
-```
-
----
-
-# Development Phase Folder Structure
-
-Once development begins, the project expands as follows.
-
-```text
-Project-Name/
-
-README.md
-.gitignore
-.env.example
-
-docs/
-│
-├── BRD.md
-├── Architecture.md
-├── Database.md
-├── API.md
-└── Roadmap.md
-
-frontend/
-│
-├── src/
-├── public/
-├── package.json
-└── ...
-
-backend/
-│
-├── .venv/
-├── requirements.txt
-├── main.py
-├── app/
-│   ├── api/
-│   ├── database/
-│   ├── models/
-│   ├── services/
-│   ├── ai/
-│   └── utils/
-
-database/
 
 sample_data/
 
@@ -340,80 +452,108 @@ assets/
 tests/
 ```
 
-> Note: Create files such as `.venv`, `requirements.txt`, `.env`, and React project files **only when the implementation phase begins**, not during the planning phase.
-
 ---
 
-# Engineering Gates
+# AI Engineering Gates
 
-Every project must pass these checkpoints before moving forward.
+Every project must pass the following checkpoints.
 
-### Gate 1 — Problem Validation
+## Gate 1
+
+Business Problem Validated
 
 Question:
 
-> Is this a real business problem worth solving?
+> Is this a real problem worth solving?
 
 ---
 
-### Gate 2 — BRD Complete
+## Gate 2
+
+Intelligence Opportunity Approved
 
 Question:
 
-> Do I know exactly what the application should do?
+> Does this problem genuinely require AI?
 
 ---
 
-### Gate 3 — Architecture Approved
+## Gate 3
+
+Intelligence Designed
 
 Question:
 
-> Do I know how the system will work?
+> Do I know exactly how the AI should think?
 
 ---
 
-### Gate 4 — Database Ready
+## Gate 4
+
+Context & Tools Ready
 
 Question:
 
-> Is the data model complete?
+> Does the AI have access to the right information and tools?
 
 ---
 
-### Gate 5 — API Contract Ready
+## Gate 5
+
+Evaluation Defined
 
 Question:
 
-> Can the frontend and backend communicate?
+> How will I measure whether the AI is successful?
 
 ---
 
-### Gate 6 — Development
+## Gate 6
+
+Prototype Validated
 
 Question:
 
-> Can development begin confidently?
+> Has the intelligence layer demonstrated the desired behavior?
 
 ---
 
-### Gate 7 — Testing Complete
+## Gate 7
+
+System Integrated
 
 Question:
 
-> Does the application work correctly?
+> Does the AI work correctly within the application?
 
 ---
 
-### Gate 8 — Deployment
+## Gate 8
+
+Deployment & Learning
 
 Question:
 
-> Is the application ready for real users?
+> Can the system be monitored, improved, and extended over time?
 
 ---
 
-# Guiding Principle
+# Guiding Principles
 
-> **Never start coding until the business problem, architecture, database design, and API design are clearly defined.**
+* Solve the business problem before selecting the model.
+* Design the intelligence before writing prompts.
+* Design prompts before writing code.
+* Build the intelligence layer before building the interface.
+* Evaluate AI continuously.
+* Treat prompts, tools, and reasoning as reusable assets.
+* Every completed project should improve the Tathya Intelligence Framework.
 
-Following this lifecycle reduces rework, improves software quality, and creates AI applications that are easier to maintain, scale, and extend
+---
+
+# Final Principle
+
+> **The interface delivers the experience.**
+>
+> **The intelligence delivers the value.**
+>
+> **Always engineer the intelligence first.**
